@@ -1,0 +1,1 @@
+<?php	require_once("baglan.php");	$kisi=$_SESSION["kisi"];	$kadi=$_SESSION["kadi"];	mysql_query("delete from arkadaslik where (istekalan='$kadi' and istekgonderen='$kisi') or (istekalan='$kisi' and istekgonderen='$kadi')");?>

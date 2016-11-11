@@ -1,0 +1,821 @@
+body{
+	margin:0;
+	padding:0;
+	color:#fff;
+}
+
+*{
+	border:0;
+	margin:0;
+	padding:0;
+	font-family:Comic Sans Ms;
+	
+	font-weight:bold;
+}
+
+ul,li,a{
+	text-decoration:none;
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+
+.close{
+	color:#f00;
+	font-size:30px;
+	position:absolute;
+	right:2%;
+	top:2%;
+}
+
+/* SCROLLBAR ÝÇÝN */
+::-webkit-scrollbar {
+    width: 10px;
+}
+ 
+::-webkit-scrollbar-track {
+	background:transparent;
+	
+}
+ 
+::-webkit-scrollbar-thumb {
+	background:#aaa;
+	border-radius:10px;
+}
+
+
+/*KAPSAYICI DÝV*/
+
+#kapsayici{
+	width:1000px;
+	height:600px;
+	position:relative;
+	margin:20px auto;
+	background:#0080FF;
+}
+
+	/*SOL DÝV*/
+	
+	#kapsayici #sol{
+		width:300px;
+		height:600px;
+		border-right:2px solid #000;
+		float:left;
+	}
+		#kapsayici #sol #ust_profil{
+			width:276px;
+			position:relative;
+			float:left;
+			padding:6px 12px;
+			height:58px;
+			line-height:70px;
+			border-bottom:2px solid #000;
+		}
+		
+			#kapsayici #sol #ust_profil #resim_bolumu{
+				width:72px;
+				height:60px;
+				float:left;
+				line-height:72px;
+			}
+			
+				#kapsayici #sol #ust_profil #resim_bolumu #kucuk_resim{
+					max-width:60px;
+					max-height:60px;
+					border-radius:60px;
+					cursor:pointer;
+				}
+				
+		
+			#kapsayici #sol #ust_profil #isim_bolumu{
+				width:166px;
+				height:60px;
+				float:left;
+				font-size:30px;
+				line-height:60px;
+				float:left;
+			}
+			
+			#kapsayici #sol #ust_profil #ayrinti_bolumu{
+				width:38px;
+				text-align:center;
+				height:60px;
+				float:left;
+				cursor:pointer;
+				line-height:60px;
+				position:relative;
+			}
+				#kapsayici #sol #ust_profil #ayrinti_bolumu img{
+					position:relative;
+					margin-top:18px;
+					width:20px;
+				}
+			
+				#kapsayici #sol #ust_profil #ayrinti_bolumu #ayrinti_menu{
+					position:absolute;
+					width:150px;
+					min-height:60px;
+					background:#ececfb;
+					margin:0;
+					padding:0;
+					border-radius:10px;
+					z-index:2;
+					display:none;
+				}
+					
+					#kapsayici #sol #ust_profil #ayrinti_bolumu #ayrinti_menu li a{
+						height:30px;
+						width:150px;
+						display:block;
+						text-align:center;
+						line-height:30px;
+						color:#f02;
+						margin-top:3px;
+						
+					}
+				
+					#kapsayici #sol #ust_profil #ayrinti_bolumu #ayrinti_menu:before{
+						content:'';
+						border-right:18px solid transparent;
+						border-left:18px solid #ececfb;
+						border-top:12px solid transparent;
+						border-bottom:12px solid #ececfb;
+						top:-24px;
+						left:18px;
+						position:absolute;
+					}
+					
+		
+		#kapsayici #sol #uye_arama{
+			width:300px;
+			height:30px;
+			float:left;
+			background:#f00;
+			border-bottom:2px solid #000;
+			line-height:30px;
+		}
+			
+			#kapsayici #sol #uye_arama label#uye{
+				position:relative;
+			}
+			
+			#kapsayici #sol #uye_arama #txt{
+				width:255px;
+				height:30px;
+				float:left;
+				padding-left:35px;
+				padding-right:10px;
+				line-height:30px;
+				font-size:14px;
+				color:#aaa;
+			}
+			
+			#kapsayici #sol #uye_arama #resim_arama{
+				position:absolute;
+				top:4px;
+				left:8px;
+			}
+			
+		#kapsayici #sol .tab{
+			width:300px;
+			min-height:30px;
+			float:left;
+			padding-bottom:8px;
+			overflow:hidden;
+			
+		}
+		
+		#kapsayici #sol .tab .aktif{
+			background:#056;
+			border-right:5px inset #056;
+			border-left:5px inset #056;
+			border-bottom:5px inset #056;
+		}
+			
+			#kapsayici #sol .tab li{
+				float:left;
+				background:#094;
+				padding:2px 8px;
+				border-radius:0 0 12px 12px;
+				margin-left:10px;
+				border-right:5px inset #094;
+				border-left:5px inset #094;
+				border-bottom:5px inset #094;
+				cursor:pointer;
+			}
+			
+			
+		#kapsayici #sol #uyeler_bolumu{
+			width:300px;
+			height:456px;
+			float:left;
+			overflow:hidden;
+		}
+		
+			#kapsayici #sol  a{
+				color:#fff;
+			}
+		
+			#kapsayici #sol  .uyeler{
+				width:276px;
+				padding:6px 12px;
+				height:58px;
+				float:left;
+				border-bottom:2px solid #fff;
+				line-height:58px;
+				float:left;
+				position:relative;
+			}
+			
+				#kapsayici #sol  .uyeler .uye_resim{
+					width:60px;
+					height:50px;
+					float:left;
+					text-align:center;
+					position:relative;
+				}
+				
+				
+					#kapsayici #sol  .uyeler .uye_resim img{
+						max-width:50px;
+						max-height:50px;
+						border-radius:50px;
+					}
+					
+					#kapsayici #sol  .uyeler .uye_resim .mesaj_sayisi{
+						position:absolute;
+						top:-2px;
+						font-size:14px;
+						left:-8px;
+						max-height:20px;
+						max-width:20px;
+						padding:5px;
+						line-height:15px;
+						background:#eeBe00;
+						border-radius:14px;
+					}
+					
+				#kapsayici #sol  .uyeler .uye_isim{
+					width:142px;
+					max-width:143px;
+					height:50px;
+					float:left;
+					font-size:20px;
+					line-height:50px;
+					overflow:hidden;
+				}
+				
+				#kapsayici #sol  .uyeler .uye_ok{
+					width:40px;
+					height:50px;
+					float:left;
+					line-height:50px;
+					font-size:80px;
+					cursor:pointer;
+					color:#5f0;
+				}
+				
+				#kapsayici #sol  .uyeler .uye_online{
+					width:50px;
+					height:50px;
+					position:relative;
+					float:left;
+					border-radius:15px;
+					background:#f00;
+					text-align:center;
+					line-height:50px;
+					font-size:24px;
+				}
+				
+					
+				
+		#kapsayici #sol #ust_profil_gizli{
+			width:300px;
+			height:600px;
+			display:none;
+			float:left;
+		}
+		
+			#kapsayici #sol #ust_profil_gizli #geri_don{
+				width:276px;
+				height:58px;
+				padding:6px 12px;
+				line-height:58px;
+				border-bottom:2px solid #000;
+			}
+			
+				#kapsayici #sol #ust_profil_gizli #geri_don #geri_resim{
+					width:60px;
+					height:50px;
+					float:left;
+					line-height:58px;
+					cursor:pointer;
+					padding-top:8px;
+				}
+				
+				#kapsayici #sol #ust_profil_gizli #geri_don #geri_yazi{
+					font-size:30px;
+					width:216px;
+					height:58px;
+					float:left;
+				}
+				
+			#kapsayici #sol #ust_profil_gizli #ust_profil_resim{
+				width:276px;
+				padding:10px 12px;
+				height:230px;
+				float:left;
+				text-align:center;
+				line-height:230px;
+			}
+			
+				#kapsayici #sol #ust_profil_gizli #ust_profil_resim label.file input{
+					position:absolute;
+					left:-9999px;
+				}
+
+				#kapsayici #sol #ust_profil_gizli #ust_profil_resim label.file img{
+					max-width:200px;
+					max-height:200px;
+					border-radius:200px;
+				}
+				
+			#kapsayici #sol #ust_profil_gizli #sifre_yenileme_bolumu{
+				width:276px;
+				padding:6px 12px;
+				height:266px;
+				float:left;
+			}
+			
+				#kapsayici #sol #ust_profil_gizli #sifre_yenileme_bolumu #yenile_yazi{
+					font-size:24px;
+					border-bottom:2px solid #fff;
+					width:276px;
+					text-align:center;
+					padding:0;
+					margin:0;
+				}
+				
+				#kapsayici #sol #ust_profil_gizli #sifre_yenileme_bolumu .yenile_satir{
+					width:276px;
+					height:30px;
+					margin-top:20px;
+					float:left;
+					line-height:30px;
+				}
+				
+					#kapsayici #sol #ust_profil_gizli #sifre_yenileme_bolumu .yenile_satir .yazi{
+						font-weight:normal;
+						float:left;
+						margin-right:15px;
+					}
+				
+					#kapsayici #sol #ust_profil_gizli #sifre_yenileme_bolumu .yenile_satir .txt{
+						width:141px;
+						height:10px;
+						border-radius:12px;
+						padding:8px 10px;
+						font-weight:bolder;
+						font-size:18px;
+					}
+				
+					#kapsayici #sol #ust_profil_gizli #sifre_yenileme_bolumu .yenile_satir .gonderme{
+						display:block;
+						height:30px;
+						padding-left:90px;
+					}
+				
+						#kapsayici #sol #ust_profil_gizli #sifre_yenileme_bolumu .yenile_satir .gonderme .btn{
+							width:150px;
+							height:30px;
+							text-align:center;
+							font-size:18px;
+							color:#fff;
+							background:#0f0;
+							border-radius:12px;
+							line-height:30px;
+						}
+					
+				#kapsayici #sol #ust_profil_gizli #sifre_yenileme_bolumu #sonuc{
+					font-weight:normal;
+					text-align:center;
+					float:left;
+					margin:0;
+					width:276px;
+					text-align:center;
+				}
+				
+				
+				#kapsayici #sol #ust_profil_gizli #sifre_yenileme_bolumu label.arkaplan{
+					position:relative;
+					float:left;
+				}
+				
+					#kapsayici #sol #ust_profil_gizli #sifre_yenileme_bolumu label.arkaplan input{
+						position:absolute;
+						left:-9999px;
+					}
+					
+					#kapsayici #sol #ust_profil_gizli #sifre_yenileme_bolumu label.arkaplan span{
+						background:#FFA500;
+						padding:5px 10px;
+						text-align:center;
+						border-radius:12px;
+						cursor:pointer;
+					}
+				
+				
+		
+		
+	/*ÝÇERÝK DÝVÝ*/
+	
+	#kapsayici #icerik{
+		width:698px;
+		height:600px;
+		float:left;
+	}
+	
+		#kapsayici #icerik #istek{
+			width:658px;
+			height:550px;
+			float:left;
+			padding:20px;
+		}
+		
+				#kapsayici #icerik #istek h3{
+					font-size:50px;
+					color:#fff;
+				}
+		
+			#kapsayici #icerik #istek .istek_kisi{
+				width:180px;
+				height:225px;
+				margin:10px;
+				float:left;
+				position:relative;
+				border:1px solid #fff;
+				padding:5px;
+				border-radius:12px;
+				
+			}
+			
+				#kapsayici #icerik #istek .istek_kisi .bilgiler{
+					width:180px;
+					height:50px;
+					position:absolute;
+					z-index:1;
+					margin-top:100px;
+				}
+					
+					#kapsayici #icerik #istek .istek_kisi .bilgiler img{
+						width:50px;
+						height:50px;
+						border-radius:80px;
+					}
+			
+				#kapsayici #icerik #istek .istek_kisi .arkaplan{
+					width:180px;
+					height:125px;
+					float:left;
+					text-align:center;
+					line-height:125px;
+				}
+					
+					#kapsayici #icerik #istek .istek_kisi .arkaplan img{
+						max-width:125px;
+						max-height:125px;
+						opacity:0.8;
+					}
+					
+				
+				#kapsayici #icerik #istek .istek_kisi .onaylama{
+					width:180px;
+					height:100px;
+					float:left;
+					line-height:120px;
+					text-align:center;
+				}
+				
+					#kapsayici #icerik #istek .istek_kisi .onaylama .btn{
+						padding:8px 15px;
+						background:#094;
+						border:3px inset #094;
+						border-radius:12px;
+						color:#fff;
+					}
+					
+					#kapsayici #icerik #istek .istek_kisi .onaylama .btn.iptal{
+						background:#f20;
+						border:3px inset #f20;
+					}
+				
+	
+		#kapsayici #icerik #me{
+			width:600px;
+			height:500px;
+			padding:50px;
+			margin:0 auto;
+		}
+		
+			#kapsayici #icerik #me #me_resim{
+				width:250px;
+				height:250px;
+				float:left;
+				line-height:250px;
+				text-align:center;
+				
+			}
+		
+			#kapsayici #icerik #me h1{
+				text-decoration:underline;
+				font-style:italic;
+				margin-bottom:10px;
+			}
+			
+			
+				#kapsayici #icerik #me #me_resim #me_img{
+					max-width:250px;
+					max-height:250px;
+					border-radius:20px;
+				}
+				
+			#kapsayici #icerik #me #me_icerik{
+				width:350px;
+				height:250px;
+				float:left;
+			}
+			
+				#kapsayici #icerik #me #me_icerik ul li{
+					margin-left:30px;
+					list-style-type: square;
+					margin-top:10px;
+				}
+			
+			#kapsayici #icerik #me #me_alt{
+				width:600px;
+				height:190px;
+				float:left;
+				margin-top:10px;
+			}
+			
+				#kapsayici #icerik #me #me_alt h2{
+					text-decoration:underline;
+					font-style:italic;
+					margin-bottom:10px;
+				}
+				
+				#kapsayici #icerik #me #me_alt label{
+					margin-top:20px;
+					height:30px;
+				}
+				
+					#kapsayici #icerik #me #me_alt #evet{
+						background:#eeBe00;
+						height:30px;
+						width:300px;
+						text-align:right;
+						padding:3px 5px;
+					}
+					
+					#kapsayici #icerik #me #me_alt #hayir{
+						background:#f20;
+						height:30px;
+						width:300px;
+						text-align:right;
+						padding:3px 5px;
+					}
+	
+		#kapsayici #icerik #konusulan_uye{
+			padding:6px 20px;
+			width:658px;
+			height:58px;
+			border-bottom:2px solid #000;
+			float:left;
+			position:relative;
+		}
+		
+			#kapsayici #icerik #konusulan_uye #konusulan_uye_resim{
+				width:85px;
+				height:58px;
+				float:left;
+				line-height:58px;
+			}
+			
+				#kapsayici #icerik #konusulan_uye #konusulan_uye_resim img{
+					max-width:60px;
+					max-height:60px;
+					border-radius:60px;
+				}
+				
+			#kapsayici #icerik #konusulan_uye #konusulan_uye_isim{
+				width:503px;
+				height:58px;
+				font-size:30px;
+				line-height:58px;
+				float:left;
+				text-align:center;
+			}
+			
+			#kapsayici #icerik #konusulan_uye #konusulan_uye_ayrinti{
+				width:70px;
+				height:58px;
+				float:left;
+				line-height:58px;
+				text-align:center;
+				position:realative;
+			}
+			
+				#kapsayici #icerik #konusulan_uye #konusulan_uye_ayrinti #ayrinti{
+					width:150px;
+					height:110px;
+					background:#ececfb;
+					position:absolute;
+					z-index:1;
+					display:none;
+					border-radius:15px;
+				}
+				
+					#kapsayici #icerik #konusulan_uye #konusulan_uye_ayrinti #ayrinti ul li{
+						height:30px;
+						margin-top:5px;
+						width:150px;
+						line-height:30px;
+					}
+				
+					#kapsayici #icerik #konusulan_uye #konusulan_uye_ayrinti #ayrinti ul li a{
+						color:#f00;
+						width:150px;
+						cursor:pointer;
+						display:inline-block;
+						text-align:center;
+						height:30px;
+					}
+					
+				
+				#kapsayici #icerik #konusulan_uye #konusulan_uye_ayrinti #ayrinti:before{
+					content:'';
+					border-right:15px solid transparent;
+					border-left:15px solid transparent;
+					border-top:15px solid transparent;
+					border-bottom:15px solid #ececfb;
+					top:-30px;
+					left:30px;
+					position:absolute;
+				}
+			
+				#kapsayici #icerik #konusulan_uye #konusulan_uye_ayrinti img{
+					margin-top:5px;
+					margin-left:10px;
+					cursor:pointer;
+					
+				}
+				
+		#kapsayici #icerik #mesajlar{
+			width:638px;
+			height:397px;
+			float:left;
+			overflow-y:auto;
+			overflow-x:hidden;
+			position:relative;
+			padding:30px;
+			background-repeat:no-repeat;
+			background-size:auto 100%;
+			background-position:center;
+		}
+		
+			#kapsayici #icerik #mesajlar .mesajda_resim{
+				width:400px;
+				height:auto;
+				border-radius:12px;
+			}
+		
+			#kapsayici #icerik #mesajlar .satir{
+				width:638px;
+				min-height:10px;
+				margin-top:5px;
+				
+			}
+			
+			#kapsayici #icerik #mesajlar .gonderen_mesaj{
+				background:#DD6F00;
+				max-width:478px;
+				min-height:0px;
+				display:inline-block;
+				border-radius:12px;
+				padding:5px 8px;
+				font-size:20px;
+			}
+			
+			#kapsayici #icerik #mesajlar .giris_resim{
+				width:50px;
+				height:50px;
+				text-align:center;
+				line-height:50px;
+			}
+			
+			#kapsayici #icerik #mesajlar  .saat{
+				font-size:10px;
+				color:#666666;
+			}
+			
+			#kapsayici #icerik #mesajlar  .mesaj{
+				max-width:478px;
+				min-height:10px;
+				display:inline-block;
+				background:#00D900;
+				padding:5px 8px;
+				border-radius:12px;
+				font-size:20px;
+			}
+			
+				#kapsayici #icerik #mesajlar  .giris_resim img{
+					width:42px;
+					height:42px;
+					border-radius:42px;
+				}
+				
+				#kapsayici #icerik #mesajlar .alan_resim img{
+					width:42px;
+					height:42px;
+					border-radius:42px;
+				}
+			
+			#kapsayici #icerik #mesajlar .mesaj_link{
+				color:#fff;
+				text-decoration:underline;
+				font-size:26px;
+			}
+			
+		
+		#kapsayici #icerik #mesaj_gonder_bolumu{
+			width:698px;
+			height:71px;
+			float:left;
+			position:relative;
+		}
+		
+		#kapsayici #icerik #mesaj_gonder_bolumu #mesaj_resim label.resim_mesaj{
+			position:relative;
+			
+		}
+		
+			#kapsayici #icerik #mesaj_gonder_bolumu #mesaj_resim label.resim_mesaj input{
+				position:absolute;
+				left:-9999px;
+			}
+		
+			
+		
+			
+				#kapsayici #icerik #mesaj_gonder_bolumu span#gonder #mesaj_resim{
+					position:absolute;
+					top:0;
+					left:0;
+					width:71px;
+					height:71px;
+					text-align:center;
+					line-height:71px;
+					float:left;
+					z-index:1;
+				}
+				
+					#kapsayici #icerik #mesaj_gonder_bolumu span#gonder #mesaj_resim img{
+						margin-top:10px;
+						width:50px;
+						height:50px;
+					}
+				
+				#kapsayici #icerik #mesaj_gonder_bolumu #gonder_btn{
+					position:absolute;
+					width:100px;
+					height:61px;
+					right:0;
+					padding-top:10px;
+					text-align:center;
+					line-height:71px;
+					border-left:2px solid #aaa;
+					cursor:pointer;
+				}
+			
+				#kapsayici #icerik #mesaj_gonder_bolumu #txt{
+					height:61px;
+					width:527px;
+					float:left;
+					font-size:24px;
+					color:#666;
+					resize:none;
+					padding-left:71px;
+					padding-right:100px;
+					overflow:hidden;
+					padding-top:5px;
+					padding-bottom:5px;
+				}
+				
+			
+	
+	
+
+
+
+
+

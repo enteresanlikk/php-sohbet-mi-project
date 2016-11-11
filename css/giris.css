@@ -1,0 +1,316 @@
+body{
+	background-image:url('../img/login_arkaplan.png');
+	background-repeat:no-repeat;
+			background-size:100% auto;	
+}
+
+*{
+	margin:0;
+	padding:0;
+	color:#fff;
+	font-family:Comic Sans Ms;
+}
+
+a,li,ul{
+	text-decoration:none;
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+
+#kapsayici{
+	width:1000px;
+	height:600px;
+	position:relative;
+	margin:20px auto;
+}
+
+#gelen_sonuc{
+	 position:absolute;
+	 width:100%;
+	 top:5px;
+	 height:30px;
+	 text-align:center;
+	 line-height:30px;
+ }
+
+/*------------------KAYIT BÖLÜMÜ İÇİN--------------------------*/
+
+	#kapsayici #kayit_bolumu{
+		width:500px;
+		height:600px;
+		float:left;
+		position:relative;
+	}
+	
+		#kapsayici #kayit_bolumu #kayit_btn{
+			font-size:30px;
+			text-align:center;
+			width:300px;
+			height:60px;
+			border-radius:12px;
+			line-height:60px;
+			border:5px inset #D96D00;
+			background:#FF8000;
+			margin-top:30px;
+			margin-left:auto;
+			margin-right:auto;
+			position:relative;
+			font-weight:bold;
+			cursor:pointer;
+		}
+		
+		#kapsayici #kayit_bolumu #kayit_kutu{
+			width:260px;
+			height:410px;
+			border:5px inset #D96D00;
+			background:#FF8000;
+			margin-top:2px;
+			margin-left:auto;
+			margin-right:auto;
+			border-radius:12px;
+			padding:20px;
+			display:none;
+		}
+		
+			#kapsayici #kayit_bolumu #kayit_kutu span{
+				font-size:20px;
+				font-weight:bold;
+				margin:0;
+				padding:0;
+			}
+		
+			#kapsayici #kayit_bolumu #kayit_kutu .txt{
+				width:228px;
+				height:24px;
+				border-radius:12px;
+				border:5px solid #ccc;
+				margin-top:12px;
+				color:#000;
+				font-size:20px;
+				padding:5px 15px;
+				font-weight:bold;
+				margin-bottom:15px;
+			}
+			
+				#kapsayici #kayit_bolumu #kayit_kutu label.file{
+					position:relative;
+				}
+			
+				#kapsayici #kayit_bolumu #kayit_kutu label.file .ayri{
+					width:120px;
+					height:34px;
+					line-height:34px;
+					text-align:center;
+					font-size:20px;
+					text-decoration:underline;
+					font-weight:bold;
+					border-radius:12px;
+					border:5px inset #D96D00;
+					background:#FF8000;
+					padding:3px 5px;
+					cursor:pointer;
+				}
+			
+				#kapsayici #kayit_bolumu #kayit_kutu label.file input{
+					position:absolute;
+					left:-9999px;
+				}
+				
+			#kapsayici #kayit_bolumu #kayit_kutu #satir{
+				width:260px;
+				height:50px;
+				margin-top:29px;
+				float:left;
+				text-align:right;
+			}
+				
+				#kapsayici #kayit_bolumu #kayit_kutu #satir .btn{
+					width:180px;
+					min-height:40px;
+					text-align:center;
+					line-height:40px;
+					border-radius:12px;
+					border:5px inset #D96D00;
+					background:#FF8000;
+					font-size:30px;
+					font-weight:bold;
+					
+				}
+	
+	
+/*------------------GİRİŞ BÖLÜMÜ İÇİN--------------------------*/
+	
+	#kapsayici #giris_bolumu{
+		width:500px;
+		height:600px;
+		float:left;
+		position:relative;
+	}
+	
+	#kapsayici #giris_bolumu #giris_btn{
+			font-size:30px;
+			text-align:center;
+			width:300px;
+			height:60px;
+			border-radius:12px;
+			line-height:60px;
+			border:5px inset #056;
+			background:#068;
+			margin-top:30px;
+			margin-left:auto;
+			margin-right:auto;
+			position:relative;
+			font-weight:bold;
+			cursor:pointer;
+		}
+		
+		#kapsayici #giris_bolumu #giris_kutu{
+			width:260px;
+			height:255px;
+			border:5px inset #056;
+			background:#068;
+			margin-top:2px;
+			margin-left:auto;
+			margin-right:auto;
+			border-radius:12px;
+			padding:20px;
+			
+		}
+		
+			#kapsayici #giris_bolumu #giris_kutu span{
+				font-size:20px;
+				font-weight:bold;
+				margin:0;
+				padding:0;
+			}
+		
+			#kapsayici #giris_bolumu #giris_kutu .txt{
+				width:228px;
+				height:24px;
+				border-radius:12px;
+				border:5px solid #ccc;
+				margin-top:12px;
+				color:#000;
+				font-size:20px;
+				padding:5px 15px;
+				font-weight:bold;
+				margin-bottom:10px;
+			}
+			
+				
+			#kapsayici #giris_bolumu #giris_kutu #satir{
+				width:260px;
+				height:50px;
+				float:left;
+				text-align:right;
+			}
+				
+				#kapsayici #giris_bolumu #giris_kutu #satir .btn{
+					width:180px;
+					min-height:40px;
+					text-align:center;
+					line-height:40px;
+					border-radius:12px;
+					border:5px inset #056;
+					background:#068;
+					font-size:30px;
+					font-weight:bold;
+					
+				}
+
+				
+/*------------------ŞİFREMİ UNUTTUM BÖLÜMÜ İÇİN--------------------------*/
+
+	#kapsayici #unuttum_bolumu{
+		position:absolute;
+		width:300px;
+		min-height:100px;
+		background:#4AA02C;
+		right:450px;
+		top:150px;
+		z-index:1;
+		border-radius:12px;
+		border:5px inset #4AA02C;
+		display:none;
+	}
+	
+		#kapsayici #unuttum_bolumu #ust{
+			width:280px;
+			position:relative;
+			height:46px;
+			line-height:50px;
+			padding:2px 10px;
+			border-bottom:2px solid #fff;
+			font-size:26px;
+			border-radius:12px 12px 0 0;
+		}
+		
+			#kapsayici #unuttum_bolumu #ust .kapat{
+				width:30px;
+				height:46px;
+				float:right;
+				text-align:center;
+				line-height:46px;
+				font-weight:bolder;
+				font-size:24px;
+				color:#f20;
+			}
+			
+		#kapsayici #unuttum_bolumu #icerik{
+			width:280px;
+			padding:2px 10px;
+			min-height:58px;
+			border-radius:0 0 12px 12px;
+			position:relative;
+			text-align:center;
+		}
+		
+			#kapsayici #unuttum_bolumu #icerik .txt{
+				width:234px;
+				padding:3px 8px;
+				color:#222;
+				font-size:20px;
+				margin-top:10px;
+				margin-bottom:10px;
+				border-radius:12px;
+			}
+			
+			#kapsayici #unuttum_bolumu #icerik #buton{
+				width:260px;
+				height:46px;
+				padding:2px 10px;
+				margin-top:10px;
+				text-align:center;
+				line-height:46px;
+			}
+			
+				#kapsayici #unuttum_bolumu #icerik #buton .btn{
+					width:234px;
+					padding:3px 8px;
+					color:#fff;
+					font-size:20px;
+					border:5px outset #4AA52C;
+					border-radius:12px;
+					background:#4AA52C;
+				}
+				
+			#kapsayici #unuttum_bolumu #icerik #sifresonuc{
+				width:280px;
+				height:20px;
+				font-size:16px;
+				font-weight:bold;
+				text-align:center;
+				line-height:20px;
+				display:none;
+			}
+
+		
+		
+		
+		
+		
+		
+		
+		
+	
