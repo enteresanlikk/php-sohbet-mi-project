@@ -30,37 +30,30 @@ if(isset($_SESSION["login"])){
 				@$sonuc="<h3>Boş Alan Bırakmayınız.</h3>";
 			}else{
 		
-				if (@$_FILES["dosya"]["size"]<2048*2048){
-					if (@$_FILES["dosya"]["type"]=="image/jpeg"){
-						@$dosya_adi=$_FILES["dosya"]["name"];
+				
+				@$dosya_adi=$_FILES["dosya"]["name"];
+			
+				$uzanti=substr($dosya_adi,-4,4);
+				$sayi_tut=rand(1,10000);
+				$dosyayolu="uyeler/".$kadi.$uzanti;
+				if (@move_uploaded_file($_FILES["dosya"]["tmp_name"],$dosyayolu)){
+				
+					@$kayityap=mysql_query("insert into uyeler(kadi,eposta,sifre,uip,resim) values('$kadi','$eposta','$sifre','$ip','$dosyayolu')");
+				
+					mysql_query("insert into online_mi(oadi,online) values('$kadi','1')");
 					
-						$uzanti=substr($dosya_adi,-4,4);
-						$sayi_tut=rand(1,10000);
-						$dosyayolu="uyeler/".$kadi.$uzanti;
-						if (@move_uploaded_file($_FILES["dosya"]["tmp_name"],$dosyayolu)){
-						
-							@$kayityap=mysql_query("insert into uyeler(kadi,eposta,sifre,uip,resim) values('$kadi','$eposta','$sifre','$ip','$dosyayolu')");
-						
-							mysql_query("insert into online_mi(oadi,online) values('$kadi','1')");
-							
-							
-						
-							if ($kayityap){
-								@$sonuc="<h3>Kayıt Başarıyla Yapıldı.</h3>";							
-							}else{
-								@$sonuc="<h3>Kayıt Yapılamadı!</h3>";
-							}
-							
-						}else{
-							@$sonuc="<h3>Resim Yüklenemedi!</h3>";
-						}
-						
+					
+				
+					if ($kayityap){
+						@$sonuc="<h3>Kayıt Başarıyla Yapıldı.</h3>";							
 					}else{
-						@$sonuc="<h3>Resim Boyutu Çok Büyük!</h3>";
+						@$sonuc="<h3>Kayıt Yapılamadı!</h3>";
 					}
-				}else{			
-				@$sonuc="<h3>Resim Boyutu Çok Büyük!</h3>";
-			}
+					
+				}else{
+					@$sonuc="<h3>Resim Yüklenemedi!</h3>";
+				}
+						
 			}
 		}
 		
@@ -72,40 +65,40 @@ if(isset($_SESSION["login"])){
 		<?php
 		
 		$sonuc="Sohbet Edebilmek İçin Giriş Yapınız. Eğer Hesabınız Yoksa Lütfen Kayıt Olunuz.";	
-	if(isset($_POST["giris"])){
-		$kadi=$_POST["kadi"];
-		$sifre=$_POST["sifre"];
-		if($kadi=="" || $sifre==""){
-			@$sonuc="<h3>Lütfen Boş Alan Bırakmayınız!</h3>";
-		}else{
-		
-		@$girisyap=mysql_query("select * from uyeler where kadi='$kadi' and sifre='$sifre'");
-		@$bakalim=mysql_fetch_row($girisyap);
-		
-		
-		if($bakalim){
-			$_SESSION["kadi"]=$bakalim[1];
-			$_SESSION["uid"]=$bakalim[0];
-			$_SESSION["eposta"]=$bakalim[3];
-			$_SESSION["ip"]=$bakalim[5];
-			$_SESSION["resim"]=$bakalim[4];
-			$_SESSION["arkaplan"]=$bakalim[6];
-			$_SESSION["login"]="true";
+		if(isset($_POST["giris"])){
+			$kadi=$_POST["kadi"];
+			$sifre=$_POST["sifre"];
+			if($kadi=="" || $sifre==""){
+				@$sonuc="<h3>Lütfen Boş Alan Bırakmayınız!</h3>";
+			}else{
 			
-			$tarih=time();
-			
-			mysql_query("update online_mi set online='1',tarih='' where oadi='$kadi'");
+			@$girisyap=mysql_query("select * from uyeler where kadi='$kadi' and sifre='$sifre'");
+			@$bakalim=mysql_fetch_row($girisyap);
 			
 			
-			@$sonuc="<h3>Hoşgeldin $kadi Giriş Yapılıyor...</h3>";
+			if($bakalim){
+				$_SESSION["kadi"]=$bakalim[1];
+				$_SESSION["uid"]=$bakalim[0];
+				$_SESSION["eposta"]=$bakalim[3];
+				$_SESSION["ip"]=$bakalim[5];
+				$_SESSION["resim"]=$bakalim[4];
+				$_SESSION["arkaplan"]=$bakalim[6];
+				$_SESSION["login"]="true";
+				
+				$tarih=time();
+				
+				mysql_query("update online_mi set online='1',tarih='' where oadi='$kadi'");
+				
+				
+				@$sonuc="<h3>Hoşgeldin $kadi Giriş Yapılıyor...</h3>";
+				
+				header("refresh:1;url=index.php");
+			}else{
+				@$sonuc="<h3>Giriş Yapılamadı!.</h3>";
+			}
+			}
 			
-			header("refresh:1;url=index.php");
-		}else{
-			@$sonuc="<h3>Giriş Yapılamadı!.</h3>";
 		}
-		}
-		
-	}
 		
 		?>
 		
